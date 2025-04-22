@@ -1,0 +1,18 @@
+import Container from "../../common/layout/Container";
+import Heading from "../../common/typography/Heading";
+import ContentGrid from "./ContentGrid";
+import ContentsAside from "./ContentsAside";
+
+const Contents = () => {
+  return (
+    <Container>
+      <Heading level={3}>Contents</Heading>
+      <div className="flex w-full h-lvh gap-10">
+        <ContentGrid />
+        <ContentsAside />
+      </div>
+    </Container>
+  );
+};
+
+export default Contents;

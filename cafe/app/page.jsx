@@ -1,4 +1,4 @@
-import Contents from "@/components/contents/Contents";
+import Contents from "@/components/sections/contents/Contents";
 
 export default function Home() {
   return (
