@@ -5,7 +5,7 @@ import ContentsAside from "./ContentsAside";
 
 const Contents = () => {
   return (
-    <Container>
+    <Container className="py-10">
       <Heading level={3}>Contents</Heading>
       <div className="flex w-full h-lvh gap-10">
         <ContentGrid />
