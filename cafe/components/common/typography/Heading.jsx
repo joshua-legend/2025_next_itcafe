@@ -1,4 +1,4 @@
-import Text from "./Text";
+import Text from "../base/Text";
 
 const Heading = ({ children, level = 6 }) => {
   const size = {

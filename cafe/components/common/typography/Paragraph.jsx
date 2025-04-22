@@ -1,4 +1,4 @@
-import Text from "./Text";
+import Text from "../base/Text";
 
 const Paragraph = ({ children, className = "" }) => {
   return (
