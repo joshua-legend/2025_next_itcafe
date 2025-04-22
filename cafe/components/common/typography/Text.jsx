@@ -1,4 +1,4 @@
-const Text = ({ children, className = "", Component = "p" }) => {
+const Text = ({ children, className = "", Component = "span" }) => {
   return <Component className={`${className}`}>{children}</Component>;
 };
 
