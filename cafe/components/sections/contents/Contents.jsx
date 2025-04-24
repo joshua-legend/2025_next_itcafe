@@ -7,7 +7,7 @@ const Contents = () => {
   return (
     <Container className="py-10">
       <Heading level={3}>Contents</Heading>
-      <div className="flex w-full h-lvh gap-10">
+      <div className="flex w-full gap-10">
         <ContentGrid />
         <ContentsAside />
       </div>

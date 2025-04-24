@@ -4,11 +4,20 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 const Slider = () => {
   return (
-    <Swiper modules={[Scrollbar]} loop={true} scrollbar={{ draggable: true }} navigation slidesPerView={1}>
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar]}
+      loop={true}
+      navigation
+      pagination={{
+        clickable: true,
+        dynamicBullets: true,
+      }}
+      slidesPerView={1}
+    >
       <SwiperSlide>
         <div className="h-[75vh]">
           <Image className="object-cover" src={"/main_1.jpg"} alt={""} fill quality={100} />
