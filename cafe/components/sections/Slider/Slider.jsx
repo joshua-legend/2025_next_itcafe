@@ -10,18 +10,18 @@ const Slider = () => {
   return (
     <Swiper modules={[Scrollbar]} loop={true} scrollbar={{ draggable: true }} navigation slidesPerView={1}>
       <SwiperSlide>
-        <div className="h-[75vh] relative">
-          <Image className="object-cover" src={"/main_1.jpg"} alt={""} fill />
+        <div className="h-[75vh]">
+          <Image className="object-cover" src={"/main_1.jpg"} alt={""} fill quality={100} />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="h-[75vh] relative">
-          <Image className="object-cover" src={"/main_2.jpg"} alt={""} fill />
+          <Image className="object-cover" src={"/main_2.jpg"} alt={""} fill quality={100} />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="h-[75vh] relative">
-          <Image className="object-cover" src={"/main_3.jpg"} alt={""} fill />
+          <Image className="object-cover" src={"/main_3.jpg"} alt={""} fill quality={100} />
         </div>
       </SwiperSlide>
     </Swiper>

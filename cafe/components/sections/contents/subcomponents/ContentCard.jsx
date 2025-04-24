@@ -18,7 +18,7 @@ const ContentCard = ({ isHigh, imageUrl, title, subTitle }) => {
       className="flex flex-col gap-2 w-full"
     >
       <div className={`${onMouse ? "opacity-100" : "opacity-0"} duration-150 flex relative justify-end top-[10px] z-10`}>
-        <Image src={`/cat${index}.png`} alt="" width={40} height={40} />
+        <Image src={`/cat${index}.png`} alt="" width={48} height={48} />
       </div>
       <div className={`${isHigh ? "h-[300px]" : "h-[200px]"} w-full relative`}>
         <Image alt="" className="object-cover" fill src={imageUrl} />
