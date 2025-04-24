@@ -1,7 +1,7 @@
-import Contents from "@/components/sections/contents/Contents";
-import Slider from "@/components/sections/slider/Slider";
-import Aside from "@/components/sections/aside/Aside";
-import MdSlider from "@/components/sections/mdSlider/MdSlider";
+import Contents from "@/components/home/contents/Contents";
+import Slider from "@/components/home/slider/Slider";
+import Aside from "@/components/home/aside/Aside";
+import MdSlider from "@/components/home/mdSlider/MdSlider";
 
 export default function Home() {
   return (

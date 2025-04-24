@@ -19,9 +19,24 @@ const MdSlider = () => {
   ];
 
   return (
-    <Container className="py-10">
+    <Container className="py-10 px-8 md:px-0">
       <Heading level={3}>Best & MD</Heading>
-      <Swiper modules={[Navigation]} navigation loop={true} slidesPerView={4} slidesOffsetBefore={30} slidesOffsetAfter={30}>
+      <Swiper
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: false,
+          },
+        }}
+        modules={[Navigation]}
+        navigation
+        loop
+      >
         {data.map((v) => (
           <SwiperSlide>
             <MD {...v} />

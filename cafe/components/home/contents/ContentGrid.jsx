@@ -1,4 +1,4 @@
-import ContentCard from "@/components/sections/contents/subcomponents/ContentCard";
+import ContentCard from "@/components/home/contents/subcomponents/ContentCard";
 import { CONTENT_CARD_DATA } from "@/constants/ContentCard";
 
 const ContentGrid = () => {
