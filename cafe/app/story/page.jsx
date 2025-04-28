@@ -22,8 +22,8 @@ const Page = () => {
         </motion.section>
       </div>
       <Container className="h-screen flex gap-20 py-10 px-8 md:px-0">
-        <motion.div transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="flex flex-col">
-          <div className="block text-2xl">
+        <motion.div className="flex-2 flex flex-col gap-10" transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
+          <Paragraph className="text-xl">
             흐르는 시간 동안 차곡차곡 쌓인 신뢰
             <br />
             동반 파트너로 이어온 끈끈한 우정
@@ -31,27 +31,27 @@ const Page = () => {
             브라질 내 단일 커피 농장으로 최대 규모인
             <br />
             이파네마 농장의 특별한 원두 품질
-          </div>
-          <div className={`h-[300px] w-full relative`}>
+          </Paragraph>
+          <div className={`h-[500px] w-full relative`}>
             <Image alt="" className="object-cover" fill src={"/coffee_1.jpg"} />
           </div>
-          <Paragraph>
+          <Paragraph className="text-xl">
             이것이
             <br />
             이파네마와 우리의 10년입니다.
           </Paragraph>
         </motion.div>
-        <div className="flex gap-4 w-full h-full">
-          <div className={"h-full flex-1 relative"}>
+        <div className="flex-5 flex gap-4 w-full h-full">
+          <motion.div whileTap={{ scale: 1.05 }} className={"h-full flex-1 relative"}>
             <Image alt="" className="object-cover" fill src={"/coffee_3.jpg"} />
-          </div>
+          </motion.div>
           <div className="flex-1 flex flex-col gap-4">
-            <div className={"h-[300px] flex-1 relative"}>
+            <motion.div whileTap={{ scale: 1.05 }} className={"h-[300px] flex-1 relative"}>
               <Image alt="" className="object-cover" fill src={"/coffee_4.jpg"} />
-            </div>
-            <div className={"h-[300px] flex-1 relative"}>
+            </motion.div>
+            <motion.div whileTap={{ scale: 1.05 }} className={"h-[300px] flex-1 relative"}>
               <Image alt="" className="object-cover" fill src={"/coffee_5.jpg"} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>
