@@ -22,7 +22,7 @@ const Page = () => {
         </motion.section>
       </div>
       <Container className="h-screen flex gap-20 py-10 px-8 md:px-0">
-        <motion.div className="flex-2 flex flex-col gap-10" transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
+        <motion.div viewport={{ once: true, amount: 0.5 }} className="flex-2 flex flex-col gap-10" transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
           <Paragraph className="text-xl">
             흐르는 시간 동안 차곡차곡 쌓인 신뢰
             <br />
@@ -54,6 +54,24 @@ const Page = () => {
             </motion.div>
           </div>
         </div>
+      </Container>
+      <Container className="h-screen gap-20 py-10 px-8 md:px-0">
+        <motion.div className="h-full flex flex-col justify-center items-center gap-10 text-center">
+          <motion.p transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
+            지구 반 바퀴를 돌아 닿은 그곳,
+            <br />
+            해발 1200M 고산지대에 있는 이파네마 농장.
+          </motion.p>
+          <motion.p transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
+            커피 전문가들이 직접 선정하고 <br />
+            공장에서 직거래로 공급한 신선한 생두와 <br />
+            최첨단 시설에서 로스팅 해 더욱 맛있는 원두를 <br />
+            카페베네에서 만나보세요!
+          </motion.p>
+          <motion.p transition={{ duration: 1 }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>
+            우리 동네 숨은 스페셜티 블렌드 맛집, 여기는 카페베네입니다.
+          </motion.p>
+        </motion.div>
       </Container>
     </>
   );
