@@ -1,0 +1,34 @@
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #6b7280;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+  color: white;
+  padding: 30px;
+}
+
+@media (max-width: 767px) {
+  .md-slider {
+    padding: 0 20px;
+  }
+
+  .md-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3a466a;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px;
+  font-weight: bold;
+}
