@@ -13,7 +13,7 @@ const Page = async () => {
       <Selector />
       <Container className="grid grid-cols-4 gap-10 py-10 px-8 md:px-0">
         {newData.map((v, i) => (
-          <Link key={i} href={`/menu/${v.id}`}>
+          <Link key={i} href={`/menu/coffee/${v.id}`}>
             <Coffee {...v} />
           </Link>
         ))}
