@@ -6,18 +6,20 @@ import Beer from "./Beer";
 import { useState } from "react";
 import Wine from "./Wine";
 import Coffee from "./Coffee";
+import Banner from "../Banner";
 
 const Panel = ({ coffees, beers, wines }) => {
-  const [selected, setSelected] = useState({ name: "커피", data: coffees });
+  const [selected, setSelected] = useState({ name: "커피", data: coffees, title: "맛있는 커피 맛집", image: "/coffee_5.jpg" });
   const handleChange = (v) =>
     setSelected((prev) => {
-      if (v == "커피") return { name: "커피", data: coffees };
-      else if (v == "맥주") return { name: "맥주", data: beers };
-      else return { name: "와인", data: wines };
+      if (v == "커피") return { name: "커피", data: coffees, title: "맛있는 커피 맛집", image: "/coffee_5.jpg" };
+      else if (v == "맥주") return { name: "맥주", data: beers, title: "힘들 땐 한잔 하는 맥주", image: "/beer.jpg" };
+      else return { name: "와인", data: wines, title: "아름다운 한잔의 와인", image: "/wine.jpg" };
     });
 
   return (
     <>
+      <Banner {...selected} />
       <Selector selected={selected} handleChange={handleChange} />
       <Container className="grid grid-cols-4 gap-10 py-10 px-8 md:px-0">
         {selected.data.map((v, i) => {

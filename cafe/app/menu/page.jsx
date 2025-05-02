@@ -8,7 +8,6 @@ const Page = async () => {
   const filteredBeers = beers.filter((v) => v.name && v.price && v.rating && v.image);
   return (
     <>
-      <Banner />
       <Panel coffees={coffees} wines={wines} beers={filteredBeers} />
     </>
   );
