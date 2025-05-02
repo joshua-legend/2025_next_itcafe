@@ -1,23 +1,15 @@
-import Container from "@/components/common/layout/Container";
 import Banner from "@/components/menu/Banner";
-import Coffee from "@/components/menu/Coffee";
-import Selector from "@/components/menu/Selector";
-import Link from "next/link";
+import { API } from "@/constants/apis";
+import Panel from "@/components/menu/Panel/Panel";
 
 const Page = async () => {
-  const data = await fetch("https://api.sampleapis.com/coffee/hot");
-  const newData = await data.json();
+  const responses = await Promise.all(API.map((url) => fetch(url)));
+  const [coffees, beers, wines] = await Promise.all(responses.map((res) => res.json()));
+  const filteredBeers = beers.filter((v) => v.name && v.price && v.rating && v.image);
   return (
     <>
       <Banner />
-      <Selector />
-      <Container className="grid grid-cols-4 gap-10 py-10 px-8 md:px-0">
-        {newData.map((v, i) => (
-          <Link key={i} href={`/menu/coffee/${v.id}`}>
-            <Coffee {...v} />
-          </Link>
-        ))}
-      </Container>
+      <Panel coffees={coffees} wines={wines} beers={filteredBeers} />
     </>
   );
 };

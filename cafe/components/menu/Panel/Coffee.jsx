@@ -1,5 +1,5 @@
+import Text from "@/components/common/base/Text";
 import Image from "next/image";
-import Text from "../common/base/Text";
 
 const Coffee = ({ title, price, image }) => {
   return (

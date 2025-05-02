@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Container from "../common/layout/Container";
+import Container from "@/components/common/layout/Container";
 
-const Selector = () => {
-  const [selected, setSelected] = useState("커피");
-  const handleChange = (v) => setSelected((prev) => v);
+const Selector = ({ selected, handleChange }) => {
   const menus = ["커피", "맥주", "와인"];
   const selectedCss = "border-b-2 border-slate-700";
 
@@ -13,7 +10,7 @@ const Selector = () => {
     <div className="border-b-1 border-slate-100">
       <Container className="flex">
         {menus.map((v, i) => (
-          <div key={i} onClick={() => handleChange(v)} className={`${selected == v && selectedCss} flex-1 py-5 h-full text-center`}>
+          <div key={i} onClick={() => handleChange(v)} className={`${selected.name == v && selectedCss} flex-1 py-5 h-full text-center`}>
             {v}
           </div>
         ))}
