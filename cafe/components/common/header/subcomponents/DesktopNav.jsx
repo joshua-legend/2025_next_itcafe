@@ -6,7 +6,6 @@ const DeskTopNav = () => {
       <NavLink link={"/story"} navName={"Story"} />
       <NavLink link={"/menu"} navName={"Menu"} />
       <NavLink link={"/store"} navName={"Store"} />
-      <NavLink link={"/content"} navName={"Contents"} />
     </ul>
   );
 };

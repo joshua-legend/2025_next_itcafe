@@ -1,5 +1,16 @@
+import Container from "@/components/common/layout/Container";
+import Banner from "@/components/store/Banner";
+import KakaoMap from "@/components/store/KakaoMap";
+
 const Page = () => {
-  return <>스토어 페이지</>;
+  return (
+    <>
+      <Banner />
+      <Container>
+        <KakaoMap />
+      </Container>
+    </>
+  );
 };
 
 export default Page;
